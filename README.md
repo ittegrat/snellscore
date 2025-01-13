@@ -7,8 +7,15 @@ This module provides an implementation of the Snell scoring method for ordered c
 To use the module, clone the repository and install the necessary dependencies:
 
 ```bash
+git clone git@github.com:IgorekLoschinin/snellscore.git
+cd .\snellscore
 pip install -r requirements.txt
 ```
+or
+```bash
+pip install snellscore
+```
+
 
 ## Usage
 
