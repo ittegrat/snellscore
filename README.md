@@ -26,11 +26,15 @@ The input should be a pandas DataFrame where rows represent groups and columns r
 ```python
 # Example frequency table
 data = {
-    "Category A": [10, 20, 30],
-    "Category B": [15, 25, 35],
-    "Category C": [20, 30, 40]
+    "Category1": [0, 6, 0, 0, 0, 2, 3, 0, 1, 2, 0, 5],
+    "Category2": [0, 3, 0, 4, 0, 4, 4, 0, 2, 2, 0, 1],
+    "Category3": [0, 1, 3, 1, 0, 3, 3, 1, 0, 2, 0, 1],
+    "Category4": [3, 0, 2, 2, 0, 1, 0, 1, 0, 0, 0, 0],
+    "Category5": [3, 1, 2, 4, 2, 0, 1, 1, 1, 2, 4, 1],
+    "Category6": [2, 1, 4, 0, 5, 2, 1, 5, 4, 4, 1, 3],
+    "Category7": [4, 0, 1, 1, 5, 0, 0, 4, 4, 0, 7, 1]
 }
-frequency_table = pd.DataFrame(data, index=["Group 1", "Group 2", "Group 3"])
+frequency_table = pd.DataFrame(data, index=[f"Group{item}" for item in range(1, 13)])
 ```
 
 ### Initialize the Snell Object
@@ -70,16 +74,24 @@ print(standardized_scores)
 For the example frequency table, the output might look like:
 
 ```plaintext
-Calculated Scores:
-Category A    0.5
-Category B    1.5
-Category C    2.5
+Snell Scores:
+Category0   -1.072418
+Category1    1.223775
+Category2    2.592759
+Category3    3.383042
+Category4    4.478767
+Category5    6.384713
+Category6    5.850891
 dtype: float64
 
 Standardized Scores:
-Category A      0
-Category B     50
-Category C    100
+Category0      0
+Category1     33
+Category2     53
+Category3     64
+Category4     80
+Category5    108
+Category6    100
 dtype: Int16
 ```
 
@@ -96,4 +108,4 @@ https://github.com/pfpetrowski/rsnell
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU General Public License. See the LICENSE file for details.

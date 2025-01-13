@@ -252,22 +252,22 @@ class Snell(object):
 
 
 if __name__ == "__main__":
-	# Пример данных
-	data = {
-		"Category1": [0, 0, 1, 0, 1],
-		"Category2": [4, 7, 0, 3, 1],
-		"Category3": [25, 44, 20, 28, 15]
-	}
 
 	# data = {
-	#     "Category1": [0, 6, 0, 0, 0, 2, 3, 0, 1, 2, 0, 5],
-	#     "Category2": [0, 3, 0, 4, 0, 4, 4, 0, 2, 2, 0, 1],
-	#     "Category3": [0, 1, 3, 1, 0, 3, 3, 1, 0, 2, 0, 1],
-	#     "Category4": [3, 0, 2, 2, 0, 1, 0, 1, 0, 0, 0, 0],
-	#     "Category5": [3, 1, 2, 4, 2, 0, 1, 1, 1, 2, 4, 1],
-	#     "Category6": [2, 1, 4, 0, 5, 2, 1, 5, 4, 4, 1, 3],
-	#     "Category7": [4, 0, 1, 1, 5, 0, 0, 4, 4, 0, 7, 1],
+	# 	"Category1": [0, 0, 1, 0, 1],
+	# 	"Category2": [4, 7, 0, 3, 1],
+	# 	"Category3": [25, 44, 20, 28, 15]
 	# }
+
+	data = {
+		"Category1": [0, 6, 0, 0, 0, 2, 3, 0, 1, 2, 0, 5],
+		"Category2": [0, 3, 0, 4, 0, 4, 4, 0, 2, 2, 0, 1],
+		"Category3": [0, 1, 3, 1, 0, 3, 3, 1, 0, 2, 0, 1],
+		"Category4": [3, 0, 2, 2, 0, 1, 0, 1, 0, 0, 0, 0],
+		"Category5": [3, 1, 2, 4, 2, 0, 1, 1, 1, 2, 4, 1],
+		"Category6": [2, 1, 4, 0, 5, 2, 1, 5, 4, 4, 1, 3],
+		"Category7": [4, 0, 1, 1, 5, 0, 0, 4, 4, 0, 7, 1],
+	}
 
 	# data = {
 	# 	"Category1": [9, 7, 14, 11, 0],
@@ -280,14 +280,15 @@ if __name__ == "__main__":
 
 	freq_table = pd.DataFrame(
 		data,
-		# index=[f"Group{item}" for item in range(1, 13)]
-		index=[f"Group{item}" for item in range(1, 6)]
+		index=[f"Group{item}" for item in range(1, 13)]
+		# index=[f"Group{item}" for item in range(1, 6)]
 	)
 	print(freq_table)
 
 	# Расчёт Snell-оценок
-	snell_scores = Snell()
+	snell_scores = Snell(standard=True)
 	snell_scores.run(freq_table)
 
 	print("Snell Scores:")
 	print(snell_scores.score)
+	print(snell_scores.score_standard)
