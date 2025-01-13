@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ### Import the Module
 
 ```python
-from snell import Snell
+from snellscore import Snell
 import pandas as pd
 ```
 
