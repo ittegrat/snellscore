@@ -234,7 +234,7 @@ class Snell(object):
 
 		scores[0] = boundaries.iloc[0] - deflection_start
 		scores[1:-1] = \
-			boundaries.iloc[1:].values + (boundaries.iloc[:-1].values / 2)
+			(boundaries.iloc[1:].values + boundaries.iloc[:-1].values) / 2
 		scores[-1] = boundaries.iloc[-1] + deflection_end
 
 		return pd.Series(scores)
