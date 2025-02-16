@@ -104,7 +104,12 @@ pytest tests/
 ```
 
 ## References
-https://github.com/pfpetrowski/rsnell
+
+1. An R implementation for Snell scoring: https://github.com/pfpetrowski/rsnell
+2. Snell, E. J. “A Scaling Procedure for Ordered Categorical Data.” Biometrics 20, no. 3 (September 1964): 592. https://doi.org/10.2307/2528498.
+3. Tong, A. K. W., J. W. Wilton, and L. R. Schaeffer. “APPLICATION OF A SCORING PROCEDURE AND TRANSFORMATIONS TO DAIRY TYPE CLASSIFICATION AND BEEF EASE OF CALVING CATEGORICAL DATA.” Canadian Journal of Animal Science 57, no. 1 (March 1, 1977): 1–5. https://doi.org/10.4141/cjas77-001.
+4. Wu, Chien-Ho. “A Note on the Computation Procedure for the Approximate Estimates of the SNELL Transformation”, 2008. http://140.136.247.242/~stat2016/stat/NoteOnSnellComp.pdf
+5. Wu, Chien-Ho. “Illustration example in Excel” http://140.136.247.242/~stat2016/stat/Snell1964_ComputationExample.rar
 
 ## License
 
