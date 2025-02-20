@@ -7,8 +7,15 @@ This module provides an implementation of the Snell scoring method for ordered c
 To use the module, clone the repository and install the necessary dependencies:
 
 ```bash
+git clone git@github.com:IgorekLoschinin/snellscore.git
+cd .\snellscore
 pip install -r requirements.txt
 ```
+or
+```bash
+pip install snellscore
+```
+
 
 ## Usage
 
@@ -76,21 +83,21 @@ For the example frequency table, the output might look like:
 ```plaintext
 Snell Scores:
 Category0   -1.072418
-Category1    1.223775
-Category2    2.592759
-Category3    3.383042
-Category4    4.478767
-Category5    6.384713
+Category1    0.611888
+Category2    1.602323
+Category3    2.186739
+Category4    2.837535
+Category5    4.012972
 Category6    5.850891
 dtype: float64
 
 Standardized Scores:
 Category0      0
-Category1     33
-Category2     53
-Category3     64
-Category4     80
-Category5    108
+Category1     24
+Category2     39
+Category3     47
+Category4     56
+Category5     73
 Category6    100
 dtype: Int16
 ```
@@ -104,7 +111,10 @@ pytest tests/
 ```
 
 ## References
-https://github.com/pfpetrowski/rsnell
+1. https://www.icar.org/Guidelines/07.6-Functional-traits-Calving-Traits-in-Dairy-Cattle.pdf
+2. https://cdnsciencepub.com/doi/pdf/10.4141/cjas77-001
+3. https://www.jstor.org/stable/2528498?origin=JSTOR-pdf
+4. https://github.com/pfpetrowski/rsnell
 
 ## License
 
