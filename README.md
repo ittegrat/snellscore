@@ -7,8 +7,15 @@ This module provides an implementation of the Snell scoring method for ordered c
 To use the module, clone the repository and install the necessary dependencies:
 
 ```bash
+git clone git@github.com:IgorekLoschinin/snellscore.git
+cd .\snellscore
 pip install -r requirements.txt
 ```
+or
+```bash
+pip install snellscore
+```
+
 
 ## Usage
 
@@ -76,21 +83,21 @@ For the example frequency table, the output might look like:
 ```plaintext
 Snell Scores:
 Category0   -1.072418
-Category1    1.223775
-Category2    2.592759
-Category3    3.383042
-Category4    4.478767
-Category5    6.384713
+Category1    0.611888
+Category2    1.602323
+Category3    2.186739
+Category4    2.837535
+Category5    4.012972
 Category6    5.850891
 dtype: float64
 
 Standardized Scores:
 Category0      0
-Category1     33
-Category2     53
-Category3     64
-Category4     80
-Category5    108
+Category1     24
+Category2     39
+Category3     47
+Category4     56
+Category5     73
 Category6    100
 dtype: Int16
 ```
@@ -106,10 +113,11 @@ pytest tests/
 ## References
 
 1. An R implementation for Snell scoring: https://github.com/pfpetrowski/rsnell
-2. Snell, E. J. “A Scaling Procedure for Ordered Categorical Data.” Biometrics 20, no. 3 (September 1964): 592. https://doi.org/10.2307/2528498.
-3. Tong, A. K. W., J. W. Wilton, and L. R. Schaeffer. “APPLICATION OF A SCORING PROCEDURE AND TRANSFORMATIONS TO DAIRY TYPE CLASSIFICATION AND BEEF EASE OF CALVING CATEGORICAL DATA.” Canadian Journal of Animal Science 57, no. 1 (March 1, 1977): 1–5. https://doi.org/10.4141/cjas77-001.
+2. Snell, E. J. “A Scaling Procedure for Ordered Categorical Data.”, Biometrics 20, no. 3 (September 1964), pp. 592-607. https://doi.org/10.2307/2528498 (https://www.jstor.org/stable/2528498?origin=JSTOR-pdf).
+3. Tong, A. K. W., J. W. Wilton, and L. R. Schaeffer. “APPLICATION OF A SCORING PROCEDURE AND TRANSFORMATIONS TO DAIRY TYPE CLASSIFICATION AND BEEF EASE OF CALVING CATEGORICAL DATA”, Canadian Journal of Animal Science 57, no. 1 (March 1, 1977), pp. 1–5. https://doi.org/10.4141/cjas77-001 (https://cdnsciencepub.com/doi/pdf/10.4141/cjas77-001).
 4. Wu, Chien-Ho. “A Note on the Computation Procedure for the Approximate Estimates of the SNELL Transformation”, 2008. http://140.136.247.242/~stat2016/stat/NoteOnSnellComp.pdf
 5. Wu, Chien-Ho. “Illustration example in Excel” http://140.136.247.242/~stat2016/stat/Snell1964_ComputationExample.rar
+6. ICAR Guidelines, Section 07 - Bovine Functional Traits, Guidelines on Calving Traits in Dairy Cattle (Extract #6). https://www.icar.org/Guidelines/07.6-Functional-traits-Calving-Traits-in-Dairy-Cattle.pdf
 
 ## License
 
